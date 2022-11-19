@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #353b48;
+}
+.nav{
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a img{
+    height: 50px;
+    border-radius: 5px;
+}
+.nav .box{
+height: 30px;
+width: 30px;
+text-align: center;
+position: relative;
+/* background-color: red; */
+}
+.cart-count{
+    position: absolute;
+    /* background-color: rgb(0, 255, 55); */
+    top: -8px;
+    right: 0;
+    padding: 3px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    z-index: 99;
+    color: white;
+}
+
+#cart-icon{
+    padding-top: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+.pic img{
+    width: 100%;
+    height: 200px;
+    transition: all 0.5s ease;
+    object-fit: cover;
+}
+.pic{
+    overflow: hidden;
+}
+.pic:hover img{
+    transform: scale(1.2);
+}
+.container{
+    max-width: 1200px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+}
+.topic{
+    text-align: center;
+    margin: 2rem;
+}
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    /* grid-template-columns: repeat(5,1fr); */
+    gap: 1.5rem;
+    justify-content: center;
+    align-content: center;
+   
+}
+.food-box{
+   border: 1px solid gray;
+   padding: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   position: relative;
+}
+
+.food-title{
+    font-size: 1rem;
+    font-weight: 500;
+    color:#f5f5f5 ;
+    background-color: #ee5253;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 5px;
+}
+.food-price{
+    font-weight: bold;
+    margin: 2px;
+}
+.add-cart{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #222f3e;
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+.add-cart:hover{
+    background-color: #1dd1a1;
+}
+
+/***** cart  *****/
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 2px 3px 5px black;
+}
+
+.cart-active{
+    right: 0;
+    transition: 0.5s;
+}
+.cart-title{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom:  1px solid rgb(0, 0, 0,0.1);
+    padding-bottom: 10px;
+
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgb(2, 2, 2,0.2);
+    padding-bottom: 10px;
+    position: relative;
+}
+.cart-img{
+    width:75px;
+    height: 75px;
+    object-fit: cover;
+    padding: 5px;
+}
+.detail-box{
+    display: grid;
+    gap: 0.5rem;
+}
+.cart-food-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ee5253;
+    /* background-color: rgb(94, 255, 0); */
+}
+.price-box{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.cart-price{
+    font-weight: 500;
+}
+.cart-quantity{
+    border:  1px solid rgb(0, 0, 0,0.1);
+    outline: none;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart-remove{
+   position: absolute;
+   right: 0;
+   top: 35px;
+   font-size: 1.2rem;
+   color: red;
+   cursor: pointer;
+}
+
+.total{
+display: flex;
+justify-content: flex-end;
+margin-top: 1.5rem;
+}
+.total-title{
+font-weight: 600;
+
+}
+.total-price{
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
+.btn-buy{
+padding: 15px 10px;
+background-color: #3498db;
+color: white;
+outline: none;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+#cart-close{
+position: absolute;
+top: 1rem;
+right: 0.8rem;
+font-size: 2rem;
+cursor: pointer;
+}
+
+
+@media (max-width:576px) {
+    .nav{
+    width: 80%;
+    }
+    .cart{
+        width: 350px;
+    }
+}
+/***** End cart  *****/
